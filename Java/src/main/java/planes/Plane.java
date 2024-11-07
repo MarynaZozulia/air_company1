@@ -1,4 +1,4 @@
-package Planes;
+package planes;
 
 import java.util.Objects;
 abstract public class Plane {
