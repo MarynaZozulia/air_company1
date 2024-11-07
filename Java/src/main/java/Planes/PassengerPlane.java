@@ -1,7 +1,6 @@
 package Planes;
 
 import java.util.Objects;
-
 public class PassengerPlane extends Plane {
 
     private int passengersCapacity;

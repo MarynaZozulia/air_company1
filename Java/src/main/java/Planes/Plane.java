@@ -1,7 +1,6 @@
 package Planes;
 
 import java.util.Objects;
-
 abstract public class Plane {
     private String model;
     private int maxSpeed;
