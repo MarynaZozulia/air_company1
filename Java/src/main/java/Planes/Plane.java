@@ -43,10 +43,10 @@ abstract public class Plane {
 
     public boolean isTheSamePlane(Object planeObject){
         Plane plane = (Plane) planeObject;
-        return maxSpeed == plane.maxSpeed &&
-                maxFlightDistance == plane.maxFlightDistance &&
-                maxLoadCapacity == plane.maxLoadCapacity &&
-                Objects.equals(model, plane.model);
+        return maxSpeed == plane.getMaxSpeed() &&
+                maxFlightDistance == plane.getMaxFlightDistance() &&
+                maxLoadCapacity == plane.getMaxLoadCapacity() &&
+                Objects.equals(model, plane.getModel());
     }
 
     @Override

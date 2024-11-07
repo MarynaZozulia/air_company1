@@ -34,7 +34,8 @@ public class MilitaryPlane extends Plane {
         }
 
         MilitaryPlane plane = (MilitaryPlane) object;
-        return super.equals(plane) && type == plane.type;
+        return super.equals(plane) &&
+                type == plane.getType();
     }
 
     @Override

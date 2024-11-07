@@ -6,7 +6,6 @@ import models.ExperimentalType;
 import java.util.Objects;
 
 public class ExperimentalPlane extends Plane {
-
     private ExperimentalType type;
     private ClassificationLevel classificationLevel;
 
@@ -16,6 +15,9 @@ public class ExperimentalPlane extends Plane {
         this.classificationLevel = classificationLevel;
     }
 
+    public ExperimentalType getType() {
+        return type;
+    }
     public ClassificationLevel getClassificationLevel(){
         return classificationLevel;
     }
@@ -35,7 +37,9 @@ public class ExperimentalPlane extends Plane {
         }
 
         ExperimentalPlane plane = (ExperimentalPlane) object;
-        return super.equals(plane) && type == plane.type && classificationLevel == plane.classificationLevel;
+        return super.equals(plane) &&
+                type == plane.getType() &&
+                classificationLevel == plane.getClassificationLevel();
     }
 
     @Override

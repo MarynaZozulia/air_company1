@@ -32,7 +32,8 @@ public class PassengerPlane extends Plane {
         }
 
         PassengerPlane plane = (PassengerPlane) object;
-        return super.equals(plane) && passengersCapacity == plane.passengersCapacity;
+        return super.equals(plane) &&
+                passengersCapacity == plane.getPassengersCapacity();
     }
 
     @Override
