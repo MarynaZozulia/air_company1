@@ -20,11 +20,6 @@ public class ExperimentalPlane extends Plane {
     public ClassificationLevel getClassificationLevel(){
         return classificationLevel;
     }
-
-    public void setClassificationLevel(ClassificationLevel classificationLevel){
-        this.classificationLevel = classificationLevel;
-    }
-
     @Override
     public boolean equals(Object object) {
         if (this == object){
