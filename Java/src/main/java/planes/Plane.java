@@ -1,9 +1,8 @@
-package Planes;
+package planes;
 
 import java.util.Objects;
-
 abstract public class Plane {
-    String model;
+    private String model;
     private int maxSpeed;
     private int maxFlightDistance;
     private int maxLoadCapacity;
@@ -19,17 +18,16 @@ abstract public class Plane {
         return model;
     }
 
-    public int getMS() {
+    public int getMaxSpeed() {
         return maxSpeed;
     }
 
-    public int Get_Max_Flight_Distance() {
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
     }
 
-    public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
-        return result;
+    public int getMaxLoadCapacity() {
+        return maxLoadCapacity;
     }
 
     @Override
@@ -42,15 +40,25 @@ abstract public class Plane {
                 '}';
     }
 
+    public boolean isTheSamePlane(Object planeObject){
+        Plane plane = (Plane) planeObject;
+        return maxSpeed == plane.getMaxSpeed() &&
+                maxFlightDistance == plane.getMaxFlightDistance() &&
+                maxLoadCapacity == plane.getMaxLoadCapacity() &&
+                Objects.equals(model, plane.getModel());
+    }
+
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Plane)) return false;
-        Plane plane = (Plane) o;
-        return maxSpeed == plane.maxSpeed &&
-                maxFlightDistance == plane.maxFlightDistance &&
-                maxLoadCapacity == plane.maxLoadCapacity &&
-                Objects.equals(model, plane.model);
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+
+        if (!(object instanceof Plane)){
+            return false;
+        }
+
+        return isTheSamePlane(object);
     }
 
     @Override
