@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import planes.MilitaryPlane;
 import planes.PassengerPlane;
 import planes.Plane;
-
 import java.util.Arrays;
 import java.util.List;
 
