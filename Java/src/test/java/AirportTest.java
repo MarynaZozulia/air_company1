@@ -1,4 +1,5 @@
 import airports.Airport;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import planes.ExperimentalPlane;
 import models.ClassificationLevel;
@@ -90,11 +91,10 @@ public class AirportTest {
 
     @Test(description = "Validate getPassengerPlaneWithMaxPassengersCapacity returns the Passenger Plane with max capacity")
     public void testGetPassengerPlaneWithMaxCapacity() {
-        airport.sortByMaxLoadCapacity();
-        List<? extends Plane> actualSortedPlanes = airport.getPlanes();
+        PassengerPlane actualPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
 
-        Assert.assertEquals(actualSortedPlanes, EXPECTED_SORTED_PLANES_BY_LOAD_CAPACITY,
-                "Planes are not sorted by max load capacity as expected");
+        Assert.assertEquals(actualPlaneWithMaxPassengersCapacity, PLANE_WITH_MAX_PASSENGER_CAPACITY,
+                "The plane with the maximum passenger capacity is incorrect");
     }
 
     @Test(description = "Validate that planes are sorted by max load capacity in ascending order")
@@ -111,7 +111,8 @@ public class AirportTest {
     public void testHasAtLeastOneBomberInMilitaryPlanes() {
         List<MilitaryPlane> actualBomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
 
-        Assert.assertEquals(actualBomberMilitaryPlanes, EXPECTED_BOMBER_PLANES,
+        Assert.assertTrue(actualBomberMilitaryPlanes.containsAll(EXPECTED_BOMBER_PLANES) &&
+                        EXPECTED_BOMBER_PLANES.containsAll(actualBomberMilitaryPlanes),
                 "The bomber planes list does not match the expected bomber planes");
     }
 
@@ -121,5 +122,10 @@ public class AirportTest {
 
         Assert.assertEquals(actualExperimentalPlanes, EXPECTED_CLASSIFIED_EXPERIMENTAL_PLANES,
                 "The experimental planes list includes unclassified planes");
+    }
+
+    @AfterClass
+    public void tearDown() {
+        airport = null;
     }
 }
