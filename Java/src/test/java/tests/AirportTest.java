@@ -1,3 +1,5 @@
+package tests;
+
 import airports.Airport;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
