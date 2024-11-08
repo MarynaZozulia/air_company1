@@ -1,7 +1,13 @@
 package Planes;
 
 import java.util.Objects;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString(callSuper = true)
 abstract public class Plane {
     String model;
     private int maxSpeed;
@@ -13,33 +19,6 @@ abstract public class Plane {
         this.maxSpeed = maxSpeed;
         this.maxFlightDistance = maxFlightDistance;
         this.maxLoadCapacity = maxLoadCapacity;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getMS() {
-        return maxSpeed;
-    }
-
-    public int Get_Max_Flight_Distance() {
-        return maxFlightDistance;
-    }
-
-    public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                ", maxFlightDistance=" + maxFlightDistance +
-                ", maxLoadCapacity=" + maxLoadCapacity +
-                '}';
     }
 
     @Override
