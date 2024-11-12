@@ -23,12 +23,12 @@ abstract public class Plane {
         return maxSpeed;
     }
 
-    public int Get_Max_Flight_Distance() {
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
     }
 
     public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
+        int result = maxLoadCapacity;
         return result;
     }
 
@@ -43,10 +43,13 @@ abstract public class Plane {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Plane)) return false;
-        Plane plane = (Plane) o;
+    public boolean equals(Object planeToCompare) {
+        if (this == planeToCompare) return true;
+
+        if (!(planeToCompare instanceof Plane)) return false;
+
+        Plane plane = (Plane) planeToCompare;
+
         return maxSpeed == plane.maxSpeed &&
                 maxFlightDistance == plane.maxFlightDistance &&
                 maxLoadCapacity == plane.maxLoadCapacity &&
