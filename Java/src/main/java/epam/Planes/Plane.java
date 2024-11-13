@@ -4,16 +4,32 @@ import java.util.Objects;
 
 
 abstract public class Plane {
-	String model;
+	private String model;
 	private int maxSpeed;
 	private int maxFlightDistance;
 	private int maxLoadCapacity;
 
 	public Plane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity) {
+		if (model == null || model.isEmpty()) {
+			throw new IllegalArgumentException("Model cannot be null or empty");
+		}
+		if (maxSpeed <= 0) {
+			throw new IllegalArgumentException("Max speed should be greater than zero");
+		}
+		if (maxFlightDistance <= 0) {
+			throw new IllegalArgumentException("Max flight distance should be greater than zero");
+		}
+		if (maxLoadCapacity <= 0) {
+			throw new IllegalArgumentException("Max load capacity should be greater than zero");
+		}
 		this.model = model;
 		this.maxSpeed = maxSpeed;
 		this.maxFlightDistance = maxFlightDistance;
 		this.maxLoadCapacity = maxLoadCapacity;
+	}
+
+	public String getModel() {
+		return model;
 	}
 
 	public int getMaxSpeed() {
@@ -25,8 +41,7 @@ abstract public class Plane {
 	}
 
 	public int getMaxLoadCapacity() {
-		int result = this.maxLoadCapacity;
-		return result;
+		return maxLoadCapacity;
 	}
 
 	@Override
@@ -36,14 +51,14 @@ abstract public class Plane {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-       if (this == o) {
+	public boolean equals(Object otherObject) {
+       if (this == otherObject) {
            return true;
        }
-       if (!(o instanceof Plane)) {
+       if (!(otherObject instanceof Plane)) {
            return false;
        }
-		Plane plane = (Plane) o;
+		Plane plane = (Plane) otherObject;
 		return maxSpeed == plane.maxSpeed && maxFlightDistance == plane.maxFlightDistance
 				&& maxLoadCapacity == plane.maxLoadCapacity && Objects.equals(model, plane.model);
 	}

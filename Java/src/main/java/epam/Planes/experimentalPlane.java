@@ -17,8 +17,8 @@ public class experimentalPlane extends Plane {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		return super.equals(o);
+	public boolean equals(Object otherObject) {
+		return super.equals(otherObject);
 	}
 
 	@Override
@@ -28,6 +28,6 @@ public class experimentalPlane extends Plane {
 
 	@Override
 	public String toString() {
-		return "experimentalPlane{" + "model='" + model + '\'' + '}';
+		return "experimentalPlane{" + "model='" + getModel() + '\'' + '}';
 	}
 }
