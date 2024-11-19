@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a91a80b-cce7-42a2-ad3b-d56f6a2704c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/src/main/java/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Airport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Planes/MilitaryPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Planes/MilitaryPlane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Planes/MyPlane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Planes/PassengerPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Planes/PassengerPlane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/src/main/java/Planes/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Planes/Plane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Planes/experimentalPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Planes/experimentalPlane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/models/ClassificationLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/models/ClassificationLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/models/ExperimentalTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/models/ExperimentalTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/models/MilitaryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/models/MilitaryType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/test/java/AirportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/test/java/AirportTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +31,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/GPlascencia&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/grisceldaplascencia/Documents/GitHub/Java Course/aircompany&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
@@ -47,6 +40,21 @@
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="aircompany" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="aircompany" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
