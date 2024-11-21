@@ -1,7 +1,7 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
 /build
 /packages
-//Aircompany/vs
+/Aircompany/vs
 /Aircompany/obj
 /Aircompany/bin
 /AircompanyTests/obj
@@ -9,3 +9,7 @@
 *.suo
 /Aircompany.v12.suo
 /AircompanyTests.v12.suo
+
+../../.idea/
+*.user
+
