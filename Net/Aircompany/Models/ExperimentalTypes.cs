@@ -1,10 +1,9 @@
-﻿namespace Aircompany.Models
+﻿namespace Aircompany.Models;
+
+public enum ExperimentalTypes
 {
-    public enum ExperimentalTypes
-    {
-        LIFTING_BODY,
-        HYPERSONIC,
-        HIGH_ALTITUDE,
-        VTOL
-    }
+    LIFTING_BODY,
+    HYPERSONIC,
+    HIGH_ALTITUDE,
+    VTOL
 }
