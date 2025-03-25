@@ -1,3 +1,5 @@
+package config;
+
 import Planes.experimentalPlane;
 import models.MilitaryType;
 import Planes.MilitaryPlane;
@@ -27,11 +29,7 @@ public class Airport {
         for (Plane plane : planes) {
             if (plane instanceof MilitaryPlane) {
                 militaryPlanes.add((MilitaryPlane) plane);
-            } //if
-            else {
-
-            } // else
-        } //for
+            }
         return militaryPlanes;
     }
 

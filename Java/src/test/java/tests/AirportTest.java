@@ -1,3 +1,5 @@
+package tests;
+
 import Planes.experimentalPlane;
 import models.ClassificationLevel;
 import models.ExperimentalTypes;
@@ -49,7 +51,7 @@ public class AirportTest {
 
     @Test
     public void testGetPassengerPlaneWithMaxCapacity() {
-        System.out.println("TEST testGetPassengerPlaneWithMaxCapacity started!");
+        logger.log("TEST testGetPassengerPlaneWithMaxCapacity started!");
         Airport airport = new Airport(planes);
         PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
         Assert.assertTrue(expectedPlaneWithMaxPassengersCapacity.equals(planeWithMaxPassengerCapacity));
@@ -80,7 +82,7 @@ public class AirportTest {
         boolean flag = false;
         for (MilitaryPlane militaryPlane : bomberMilitaryPlanes) {
             if ((militaryPlane.getType() == MilitaryType.BOMBER)) {
-                flag = true;
+                flag += true;
             }
             else {
                 Assert.fail("Test failed!");
