@@ -3,12 +3,25 @@ package Planes;
 import java.util.Objects;
 
 public abstract class Plane {
-    private String model;
-    private int maxSpeed;
-    private int maxFlightDistance;
-    private int maxLoadCapacity;
+    private final String model;
+    private final int maxSpeed;
+    private final int maxFlightDistance;
+    private final int maxLoadCapacity;
 
     public Plane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity) {
+        if (model == null || model.isEmpty()) {
+            throw new IllegalArgumentException("Model cannot be null or empty.");
+        }
+        if (maxSpeed <= 0) {
+            throw new IllegalArgumentException("Max speed must be greater than zero.");
+        }
+        if (maxFlightDistance <= 0) {
+            throw new IllegalArgumentException("Max flight distance must be greater than zero.");
+        }
+        if (maxLoadCapacity <= 0) {
+            throw new IllegalArgumentException("Max load capacity must be greater than zero.");
+        }
+
         this.model = model;
         this.maxSpeed = maxSpeed;
         this.maxFlightDistance = maxFlightDistance;
@@ -33,12 +46,14 @@ public abstract class Plane {
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                ", maxFlightDistance=" + maxFlightDistance +
-                ", maxLoadCapacity=" + maxLoadCapacity +
-                '}';
+        return """
+               Plane{
+                   model='%s',
+                   maxSpeed=%d,
+                   maxFlightDistance=%d,
+                   maxLoadCapacity=%d
+               }
+               """.formatted(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
     }
 
     @Override
@@ -56,4 +71,7 @@ public abstract class Plane {
     public int hashCode() {
         return Objects.hash(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
     }
-}
+
+    // Abstract methods to be implemented by subclasses
+    public abstract void fly();
+    public abstract void land();
